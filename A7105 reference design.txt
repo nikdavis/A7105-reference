@@ -1,0 +1,44 @@
+Partlist exported from C:/Users/nik/Documents/EAGLE/projects/A7105 reference/A7105 reference design.sch at 2/20/2019 7:05 PM
+
+Part   Value             Device            Package            Description                                                BOM     DESIGNER DNP REV
+ANT    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+C1     0.1uF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C2     10pF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C3     10nF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C4     680pF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C5     2.2uF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C6     2.2uF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C7     120pF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C8     1.5nF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C9     2.2uF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C10    22pF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C11    22pF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C12    22pF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C13    10pF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+C14    1pF               CAP_0402          0402               0402 (1005 Metric)                                                                 
+C15    1pF               CAP_0402          0402               0402 (1005 Metric)                                                                 
+C16    1pF               CAP_0402          0402               0402 (1005 Metric)                                                                 
+C17    100pF             CAP_0402          0402               0402 (1005 Metric)                                                                 
+C18    10nF              CAP_0402          0402               0402 (1005 Metric)                                                                 
+FRAME1 FRAME-LETTER      FRAME-LETTER      CREATIVE_COMMONS   Schematic Frame - Letter                                                           
+L1     4.7nH             IND_0402          0402               0402                                                                               
+L2     1.2nH             IND_0402          0402               0402                                                                               
+L3     3.1nH             IND_0402          0402               0402                                                                               
+R1     200               RES_0402          0402               0402 (1005 Metric)                                                                 
+R2     10k               RES_0402          0402               0402 (1005 Metric)                                                                 
+R3     10k               RES_0402          0402               0402 (1005 Metric)                                                                 
+R4     10k               RES_0402          0402               0402 (1005 Metric)                                                                 
+R5     200               RES_0402          0402               0402 (1005 Metric)                                                                 
+R6     4k7               RES_0402          0402               0402 (1005 Metric)                                                                 
+SW1    BUTTON            BUTTON            PTS-830-SMD-SWITCH                                                                                    
+U$3    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U$4    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U$5    SMD-CHIP-LED-0402 SMD-CHIP-LED-0402 0402LED            0402 BLUE LED APG1005PBC-T-5MAV                                                    
+U$6    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U$7    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U$8    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U$9    TESTPAD           TESTPAD           TESTPAD            Test pad also can be used for tiny solder pad for signal   EXCLUDE          T      
+U1     A7105             A7105             QFN20-4X4MM        2.4GHz RF chip used with Flysky transmitters and receivers                         
+U2     ATTINY167         ATTINY167         VQFN-32                                                                                               
+U3     NMOSSOT833B/1006  NMOSSOT833B/1006  SOT833B/DFN1006B-3                                                                                    
+X1     ECX-2236          ECX-2236          2.5X2.0MM_CRYSTAL                                                                                     
