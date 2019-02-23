@@ -1290,7 +1290,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="U$9" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U3" library="nikdavis" deviceset="NMOS" device="SOT833B/1006"/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
+<part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
 </parts>
 <sheets>
 <sheet>

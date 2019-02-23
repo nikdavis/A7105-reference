@@ -1292,7 +1292,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="U$8" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$9" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="U3" library="nikdavis" deviceset="NMOS" device="SOT23-3"/>
+<part name="U3" library="nikdavis" deviceset="NMOS" device="SOT833B/1006"/>
 </parts>
 <sheets>
 <sheet>

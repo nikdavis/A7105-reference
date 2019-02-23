@@ -1291,6 +1291,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="U3" library="nikdavis" deviceset="NMOS" device="SOT833B/1006"/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
+<part name="U$7" library="AlienWhoop" deviceset="TESTPAD" device=""/>
+<part name="U$10" library="AlienWhoop" deviceset="TESTPAD" device=""/>
+<part name="U$11" library="AlienWhoop" deviceset="TESTPAD" device=""/>
+<part name="U$12" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1495,6 +1499,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <attribute name="NAME" x="156.464" y="114.681" size="1.778" layer="95"/>
 <attribute name="VALUE" x="156.464" y="109.601" size="1.778" layer="96"/>
 </instance>
+<instance part="U$7" gate="G$1" x="180.34" y="38.1" smashed="yes"/>
+<instance part="U$10" gate="G$1" x="180.34" y="35.56" smashed="yes"/>
+<instance part="U$11" gate="G$1" x="180.34" y="33.02" smashed="yes"/>
+<instance part="U$12" gate="G$1" x="180.34" y="30.48" smashed="yes"/>
 </instances>
 <busses>
 <bus name="SPI:SCK,SCS,SDIO">
@@ -1914,6 +1922,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <label x="152.4" y="76.2" size="1.778" layer="95"/>
 <wire x1="162.56" y1="76.2" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="35.56" x2="165.1" y2="35.56" width="0.1524" layer="91"/>
+<label x="167.64" y="35.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
@@ -1923,6 +1936,12 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="139.7" y1="20.32" x2="139.7" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="96.52" x2="147.32" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+<label x="139.7" y="96.52" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="30.48" x2="165.1" y2="30.48" width="0.1524" layer="91"/>
+<label x="167.64" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SBUS_NONINV" class="0">
@@ -1971,6 +1990,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="154.94" y1="10.16" x2="154.94" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<pinref part="U$7" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="38.1" x2="165.1" y2="38.1" width="0.1524" layer="91"/>
+<label x="167.64" y="38.1" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="STATUS" class="0">
 <segment>
@@ -2004,6 +2028,13 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="GIO1"/>
 <wire x1="22.86" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
 <label x="50.8" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="U$11" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
+<label x="167.64" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

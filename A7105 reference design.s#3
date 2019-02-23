@@ -1993,6 +1993,19 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="177.8" y1="78.74" x2="177.8" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="GPIO1" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="PA0"/>
+<wire x1="104.14" y1="73.66" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="99.06" x2="81.28" y2="99.06" width="0.1524" layer="91"/>
+<label x="83.82" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GIO1"/>
+<wire x1="22.86" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
+<label x="50.8" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
