@@ -1,7 +1,7 @@
 {
     "Header": {
         "Comment": "All values are metric (mm)",
-        "CreationDate": "2019-02-12T19:05:39Z",
+        "CreationDate": "2019-02-28T07:57:06Z",
         "GenerationSoftware": {
             "Application": "EAGLE",
             "Vendor": "Autodesk",
@@ -17,8 +17,8 @@
         },
         "Owner": "Nik Davis <nivvis+autodesk@gmail.com>",
         "Size": {
-            "X": 16.815,
-            "Y": 14.976
+            "X": 14.956,
+            "Y": 11.5168
         }
     }
 }

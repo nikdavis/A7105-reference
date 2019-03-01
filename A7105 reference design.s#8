@@ -1279,8 +1279,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="R4" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="SW1" library="nikdavis" deviceset="BUTTON" device=""/>
 <part name="GND9" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="U$3" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="U$4" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="R5" library="Perfect_0402" deviceset="RES_0402" device="" value="200"/>
 <part name="U$5" library="alienflight" deviceset="SMD-CHIP-LED-0402" device=""/>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -1288,11 +1286,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="R6" library="Perfect_0402" deviceset="RES_0402" device="" value="4k7"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="U$6" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="U$7" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$8" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$9" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="U3" library="nikdavis" deviceset="NMOS" device="SOT833B/1006"/>
+<part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -1462,8 +1460,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND9" gate="1" x="129.54" y="73.66" smashed="yes">
 <attribute name="VALUE" x="129.54" y="73.406" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="U$3" gate="G$1" x="180.34" y="48.26" smashed="yes"/>
-<instance part="U$4" gate="G$1" x="180.34" y="45.72" smashed="yes"/>
 <instance part="R5" gate="G$1" x="177.8" y="88.9" smashed="yes" rot="R270">
 <attribute name="NAME" x="179.2986" y="87.63" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="174.498" y="87.63" size="1.778" layer="96" rot="R270"/>
@@ -1487,15 +1483,17 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <attribute name="VALUE" x="154.94" y="28.194" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="U$6" gate="G$1" x="167.64" y="121.92" smashed="yes"/>
-<instance part="U$7" gate="G$1" x="167.64" y="119.38" smashed="yes"/>
-<instance part="U$8" gate="G$1" x="167.64" y="116.84" smashed="yes"/>
-<instance part="U$9" gate="G$1" x="167.64" y="114.3" smashed="yes"/>
-<instance part="GND8" gate="1" x="160.02" y="111.76" smashed="yes">
-<attribute name="VALUE" x="160.02" y="111.506" size="1.778" layer="96" align="top-center"/>
-</instance>
+<instance part="U$8" gate="G$1" x="167.64" y="119.38" smashed="yes"/>
+<instance part="U$9" gate="G$1" x="167.64" y="116.84" smashed="yes"/>
 <instance part="U3" gate="G$1" x="129.54" y="111.76" smashed="yes">
 <attribute name="NAME" x="134.62" y="111.76" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="134.62" y="109.22" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND11" gate="1" x="160.02" y="101.6" smashed="yes">
+<attribute name="VALUE" x="160.02" y="101.346" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C19" gate="G$1" x="157.48" y="106.68" smashed="yes">
+<attribute name="NAME" x="159.004" y="112.141" size="1.778" layer="95"/>
+<attribute name="VALUE" x="159.004" y="107.061" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -1642,13 +1640,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="132.08" y1="104.14" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="106.68" x2="142.24" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="106.68" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
-<label x="149.86" y="119.38" size="1.778" layer="95"/>
-<pinref part="U$7" gate="G$1" pin="1"/>
 <pinref part="U3" gate="G$1" pin="S"/>
-<junction x="132.08" y="106.68"/>
 </segment>
 <segment>
 <pinref part="SW1" gate="G$1" pin="2"/>
@@ -1657,19 +1649,23 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
-<label x="165.1" y="45.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$5" gate="G$1" pin="C"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="177.8" y1="68.58" x2="177.8" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND8" gate="1" pin="GND"/>
 <pinref part="U$9" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="114.3" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="116.84" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="160.02" y1="116.84" x2="160.02" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="C19" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="116.84" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
+<junction x="160.02" y="116.84"/>
+<pinref part="C19" gate="G$1" pin="2"/>
+<wire x1="157.48" y1="106.68" x2="157.48" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="104.14" x2="160.02" y2="104.14" width="0.1524" layer="91"/>
+<junction x="160.02" y="104.14"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1754,17 +1750,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="132.08" y1="129.54" x2="132.08" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="129.54" x2="139.7" y2="129.54" width="0.1524" layer="91"/>
 <junction x="132.08" y="129.54"/>
-<wire x1="139.7" y1="129.54" x2="139.7" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
-<label x="149.86" y="116.84" size="1.778" layer="95"/>
+<wire x1="139.7" y1="129.54" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
+<label x="149.86" y="119.38" size="1.778" layer="95"/>
 <pinref part="U$8" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="116.84" x2="159.004" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="159.004" y1="116.84" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="48.26" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
-<label x="165.1" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
