@@ -1295,6 +1295,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="U$10" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$11" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$12" library="AlienWhoop" deviceset="TESTPAD" device=""/>
+<part name="R7" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -1503,6 +1504,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="U$10" gate="G$1" x="180.34" y="35.56" smashed="yes"/>
 <instance part="U$11" gate="G$1" x="180.34" y="33.02" smashed="yes"/>
 <instance part="U$12" gate="G$1" x="180.34" y="30.48" smashed="yes"/>
+<instance part="R7" gate="G$1" x="109.22" y="119.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="107.7214" y="120.65" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="112.522" y="120.65" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 <bus name="SPI:SCK,SCS,SDIO">
@@ -1762,6 +1767,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="154.94" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="119.38" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
 <junction x="154.94" y="119.38"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="129.54" x2="132.08" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
@@ -1984,6 +1991,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="SW1" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="93.98" x2="109.22" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="93.98" x2="109.22" y2="119.38" width="0.1524" layer="91"/>
+<junction x="109.22" y="93.98"/>
+<pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RESET" class="0">

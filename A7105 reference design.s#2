@@ -1394,9 +1394,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND7" gate="1" x="124.46" y="20.32" smashed="yes">
 <attribute name="VALUE" x="124.46" y="20.066" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R2" gate="G$1" x="167.64" y="66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="169.1386" y="64.77" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="164.338" y="64.77" size="1.778" layer="96" rot="R270"/>
+<instance part="R2" gate="G$1" x="132.08" y="50.8" smashed="yes">
+<attribute name="NAME" x="133.35" y="52.2986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="133.35" y="47.498" size="1.778" layer="96"/>
 </instance>
 <instance part="R3" gate="G$1" x="132.08" y="119.38" smashed="yes" rot="R90">
 <attribute name="NAME" x="130.5814" y="120.65" size="1.778" layer="95" rot="R90"/>
@@ -1472,16 +1472,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="TP3" gate="G$1" x="175.26" y="15.24" smashed="yes"/>
 </instances>
 <busses>
-<bus name="SPI:SCK,SCS,SDIO">
-<segment>
-<wire x1="60.96" y1="25.4" x2="60.96" y2="12.7" width="0.762" layer="92"/>
-<label x="60.96" y="25.4" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="185.42" y1="55.88" x2="185.42" y2="43.18" width="0.762" layer="92"/>
-<label x="185.42" y="55.88" size="1.778" layer="95"/>
-</segment>
-</bus>
 </busses>
 <nets>
 <net name="VCCA" class="0">
@@ -1837,16 +1827,14 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="SDIO"/>
 <wire x1="22.86" y1="12.7" x2="58.42" y2="12.7" width="0.1524" layer="91"/>
 <label x="50.8" y="12.7" size="1.778" layer="95"/>
-<wire x1="58.42" y1="12.7" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="U2" gate="G$1" pin="PB4"/>
+<label x="124.46" y="53.34" size="1.778" layer="95"/>
+<wire x1="119.38" y1="53.34" x2="144.78" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="53.34" x2="144.78" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="167.64" y1="48.26" x2="182.88" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="55.88" x2="167.64" y2="48.26" width="0.1524" layer="91"/>
-<label x="172.72" y="48.26" size="1.778" layer="95"/>
-<wire x1="182.88" y1="48.26" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="48.26" x2="162.56" y2="48.26" width="0.1524" layer="91"/>
-<junction x="167.64" y="48.26"/>
+<wire x1="144.78" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCS" class="0">
@@ -1854,12 +1842,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="SCS"/>
 <wire x1="22.86" y1="20.32" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
 <label x="50.8" y="20.32" size="1.778" layer="95"/>
-<wire x1="58.42" y1="20.32" x2="60.96" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="182.88" y1="50.8" x2="185.42" y2="53.34" width="0.1524" layer="91"/>
-<label x="172.72" y="50.8" size="1.778" layer="95"/>
-<wire x1="182.88" y1="50.8" x2="162.56" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="PA15"/>
+<wire x1="88.9" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
+<label x="78.74" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -1867,19 +1854,19 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="SCK"/>
 <wire x1="22.86" y1="17.78" x2="58.42" y2="17.78" width="0.1524" layer="91"/>
 <label x="50.8" y="17.78" size="1.778" layer="95"/>
-<wire x1="58.42" y1="17.78" x2="60.96" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="45.72" x2="182.88" y2="45.72" width="0.1524" layer="91"/>
-<label x="172.72" y="45.72" size="1.778" layer="95"/>
-<wire x1="182.88" y1="45.72" x2="185.42" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="PB3"/>
+<wire x1="119.38" y1="55.88" x2="129.54" y2="55.88" width="0.1524" layer="91"/>
+<label x="124.46" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<wire x1="160.02" y1="66.04" x2="167.64" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="PB5"/>
+<wire x1="119.38" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
+<label x="124.46" y="50.8" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<label x="160.02" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NSBUS" class="0">

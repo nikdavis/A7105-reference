@@ -1261,9 +1261,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="R5" library="Perfect_0402" deviceset="RES_0402" device="" value="200"/>
 <part name="U$5" library="alienflight" deviceset="SMD-CHIP-LED-0402" device=""/>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C18" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
-<part name="R6" library="Perfect_0402" deviceset="RES_0402" device="" value="4k7"/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
+<part name="R6" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="U$6" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$8" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$9" library="AlienWhoop" deviceset="TESTPAD" device=""/>
@@ -1276,6 +1274,7 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="R7" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="U2" library="STM32F031G4U6" deviceset="STM32F031G4U6" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -1414,8 +1413,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="SUPPLY3" gate="G$1" x="76.2" y="76.2" smashed="yes">
 <attribute name="VALUE" x="76.2" y="78.994" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND7" gate="1" x="76.2" y="22.86" smashed="yes">
-<attribute name="VALUE" x="76.2" y="22.606" size="1.778" layer="96" align="top-center"/>
+<instance part="GND7" gate="1" x="124.46" y="20.32" smashed="yes">
+<attribute name="VALUE" x="124.46" y="20.066" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R2" gate="G$1" x="147.32" y="96.52" smashed="yes" rot="R270">
 <attribute name="NAME" x="148.8186" y="95.25" size="1.778" layer="95" rot="R270"/>
@@ -1453,16 +1452,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND10" gate="1" x="177.8" y="63.5" smashed="yes">
 <attribute name="VALUE" x="177.8" y="63.246" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C18" gate="G$1" x="68.58" y="55.88" smashed="yes">
-<attribute name="NAME" x="70.104" y="61.341" size="1.778" layer="95"/>
-<attribute name="VALUE" x="70.104" y="56.261" size="1.778" layer="96"/>
-</instance>
-<instance part="R6" gate="G$1" x="154.94" y="12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="153.4414" y="13.97" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="158.242" y="13.97" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="SUPPLY4" gate="G$1" x="154.94" y="25.4" smashed="yes">
-<attribute name="VALUE" x="154.94" y="28.194" size="1.778" layer="96" align="bottom-center"/>
+<instance part="R6" gate="G$1" x="78.74" y="40.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="77.2414" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="82.042" y="41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$6" gate="G$1" x="167.64" y="121.92" smashed="yes"/>
 <instance part="U$8" gate="G$1" x="167.64" y="119.38" smashed="yes"/>
@@ -1490,6 +1482,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 </instance>
 <instance part="GND8" gate="1" x="172.72" y="27.94" smashed="yes">
 <attribute name="VALUE" x="172.72" y="27.686" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C20" gate="G$1" x="137.16" y="60.96" smashed="yes">
+<attribute name="NAME" x="138.684" y="66.421" size="1.778" layer="95"/>
+<attribute name="VALUE" x="138.684" y="61.341" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -1651,6 +1647,12 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="175.26" y1="33.02" x2="172.72" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="33.02" x2="172.72" y2="30.48" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VSS"/>
+<wire x1="119.38" y1="27.94" x2="124.46" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="27.94" x2="124.46" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -1729,11 +1731,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <junction x="154.94" y="119.38"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="129.54" x2="132.08" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
-<wire x1="154.94" y1="22.86" x2="154.94" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -1918,15 +1915,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="RESET" class="0">
-<segment>
-<wire x1="109.22" y1="25.4" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
-<label x="121.92" y="10.16" size="1.778" layer="95"/>
-<wire x1="109.22" y1="10.16" x2="154.94" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="10.16" x2="154.94" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="STATUS" class="0">
 <segment>
 <wire x1="111.76" y1="73.66" x2="111.76" y2="81.28" width="0.1524" layer="91"/>
@@ -1959,27 +1947,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <label x="50.8" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="C18" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="66.04" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<wire x1="99.06" y1="25.4" x2="99.06" y2="22.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<wire x1="96.52" y1="25.4" x2="96.52" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<wire x1="101.6" y1="17.78" x2="101.6" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$15" class="0">
 <segment>
 <wire x1="99.06" y1="73.66" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
@@ -2007,6 +1974,12 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U2" gate="G$1" pin="PA13"/>
 <wire x1="88.9" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
 <label x="78.74" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="!NRST"/>
+<wire x1="88.9" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
