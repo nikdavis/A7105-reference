@@ -1253,9 +1253,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
 <part name="U2" library="STM32F031G4U6" deviceset="STM32F031G4U6" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
+<part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="0.1uF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C21" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="TP1" library="nikdavis" deviceset="TESTPAD" device=""/>
@@ -1267,9 +1266,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <plain>
 <text x="101.6" y="-40.64" size="3.048" layer="94">Nikolas Davis</text>
 <text x="180.34" y="-40.64" size="3.048" layer="94">0.1</text>
-<text x="109.22" y="10.16" size="1.778" layer="91">NEED:
+<text x="88.9" y="5.08" size="1.778" layer="91">NEED:
 - led pin
-- gpio pin
+- gpio pin (pick one with edge interrupts close to a7105)
 - uart tx for sbus</text>
 </plain>
 <instances>
@@ -1461,12 +1460,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND12" gate="1" x="101.6" y="81.28" smashed="yes">
 <attribute name="VALUE" x="101.6" y="81.026" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C21" gate="G$1" x="139.7" y="73.66" smashed="yes">
-<attribute name="NAME" x="141.224" y="79.121" size="1.778" layer="95"/>
-<attribute name="VALUE" x="141.224" y="74.041" size="1.778" layer="96"/>
-</instance>
-<instance part="GND13" gate="1" x="134.62" y="68.58" smashed="yes">
-<attribute name="VALUE" x="134.62" y="68.326" size="1.778" layer="96" align="top-center"/>
+<instance part="GND13" gate="1" x="129.54" y="68.58" smashed="yes">
+<attribute name="VALUE" x="129.54" y="68.326" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="124.46" y="91.44" smashed="yes">
 <attribute name="VALUE" x="124.46" y="94.234" size="1.778" layer="96" align="bottom-center"/>
@@ -1635,11 +1630,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="C20" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="73.66" x2="129.54" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="129.54" y1="71.12" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="C21" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="73.66" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="71.12" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<junction x="134.62" y="71.12"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1733,10 +1723,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="119.38" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="68.58" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
 <junction x="121.92" y="71.12"/>
-<wire x1="129.54" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
-<junction x="129.54" y="88.9"/>
-<pinref part="C21" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="88.9" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">

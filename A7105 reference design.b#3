@@ -1179,6 +1179,8 @@ design rules under a new name.</description>
 <signal name="NSBUS">
 <contactref element="R4" pad="1"/>
 <wire x1="12.5848" y1="4.6568" x2="12.5258" y2="4.7158" width="0.1524" layer="16"/>
+<contactref element="U2" pad="27"/>
+<wire x1="12.5258" y1="4.7158" x2="11.2476" y2="6.3406" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="SBUS">
 <contactref element="R3" pad="1"/>
@@ -1203,6 +1205,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="GPIO1">
 <contactref element="U1" pad="16"/>
+<contactref element="U2" pad="20"/>
+<wire x1="6.7404" y1="7.9198" x2="10.3726" y2="9.2156" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SWCLK">
 <contactref element="U2" pad="22"/>

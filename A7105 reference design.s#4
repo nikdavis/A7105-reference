@@ -248,6 +248,9 @@
 <wire x1="-0.15" y1="0.75" x2="-0.15" y2="0.45" width="0.1" layer="21"/>
 <wire x1="1.25" y1="0.75" x2="1.25" y2="-0.05" width="0.1" layer="21"/>
 </package>
+<package name="SMTPAD-RECT">
+<smd name="P$1" x="0" y="0" dx="1.2" dy="1.9" layer="1" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="A7105">
@@ -335,6 +338,11 @@ Switches electronic signals</description>
 <text x="5.08" y="0" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.778" layer="96" font="vector">&gt;VALUE</text>
 </symbol>
+<symbol name="TESTPAD">
+<description>Test point... can also be used as solder pad for signal</description>
+<circle x="0" y="0" radius="1.04726875" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="0" length="middle"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="A7105" prefix="U">
@@ -409,6 +417,21 @@ Switches electronic signals</description>
 <connect gate="G$1" pin="D" pad="P$3"/>
 <connect gate="G$1" pin="G" pad="P$1"/>
 <connect gate="G$1" pin="S" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TESTPAD" prefix="TP">
+<gates>
+<gate name="G$1" symbol="TESTPAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMTPAD-RECT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1211,7 +1234,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="ANT" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="X1" library="nikdavis" deviceset="ECX-2236" device=""/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R2" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="R3" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
@@ -1229,16 +1251,16 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="U3" library="nikdavis" deviceset="NMOS" device="SOT833B/1006"/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
-<part name="U$7" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="U$10" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="U$11" library="AlienWhoop" deviceset="TESTPAD" device=""/>
-<part name="R7" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="U2" library="STM32F031G4U6" deviceset="STM32F031G4U6" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C21" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
+<part name="TP1" library="nikdavis" deviceset="TESTPAD" device=""/>
+<part name="TP2" library="nikdavis" deviceset="TESTPAD" device=""/>
+<part name="TP3" library="nikdavis" deviceset="TESTPAD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1369,9 +1391,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <attribute name="VALUE" x="6.604" y="-21.844" size="1.778" layer="96" font="vector" align="top-left"/>
 <attribute name="NAME" x="3.81" y="-21.844" size="1.778" layer="95" font="vector" align="top-right"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="66.04" y="83.82" smashed="yes">
-<attribute name="VALUE" x="66.04" y="86.614" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="GND7" gate="1" x="124.46" y="20.32" smashed="yes">
 <attribute name="VALUE" x="124.46" y="20.066" size="1.778" layer="96" align="top-center"/>
 </instance>
@@ -1424,13 +1443,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <attribute name="NAME" x="156.464" y="114.681" size="1.778" layer="95"/>
 <attribute name="VALUE" x="156.464" y="109.601" size="1.778" layer="96"/>
 </instance>
-<instance part="U$7" gate="G$1" x="175.26" y="20.32" smashed="yes"/>
-<instance part="U$10" gate="G$1" x="175.26" y="17.78" smashed="yes"/>
-<instance part="U$11" gate="G$1" x="175.26" y="15.24" smashed="yes"/>
-<instance part="R7" gate="G$1" x="109.22" y="119.38" smashed="yes" rot="R90">
-<attribute name="NAME" x="107.7214" y="120.65" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="112.522" y="120.65" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="U2" gate="G$1" x="104.14" y="48.26" smashed="yes">
 <attribute name="NAME" x="93.9623" y="73.7043" size="2.54443125" layer="95"/>
 <attribute name="VALUE" x="93.9617" y="22.8142" size="2.54458125" layer="96"/>
@@ -1452,6 +1464,12 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND13" gate="1" x="134.62" y="68.58" smashed="yes">
 <attribute name="VALUE" x="134.62" y="68.326" size="1.778" layer="96" align="top-center"/>
 </instance>
+<instance part="SUPPLY3" gate="G$1" x="124.46" y="91.44" smashed="yes">
+<attribute name="VALUE" x="124.46" y="94.234" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="TP1" gate="G$1" x="175.26" y="20.32" smashed="yes"/>
+<instance part="TP2" gate="G$1" x="175.26" y="17.78" smashed="yes"/>
+<instance part="TP3" gate="G$1" x="175.26" y="15.24" smashed="yes"/>
 </instances>
 <busses>
 <bus name="SPI:SCK,SCS,SDIO">
@@ -1601,10 +1619,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <junction x="160.02" y="106.68"/>
 </segment>
 <segment>
-<pinref part="U$11" gate="G$1" pin="1"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="170.18" y1="15.24" x2="167.64" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="15.24" x2="167.64" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="TP3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VSS"/>
@@ -1706,6 +1724,26 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="154.94" y1="119.38" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
 <junction x="154.94" y="119.38"/>
 </segment>
+<segment>
+<pinref part="C20" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="88.9" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
+<wire x1="124.46" y1="91.44" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="VDD"/>
+<wire x1="119.38" y1="71.12" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="71.12" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<junction x="124.46" y="88.9"/>
+<pinref part="U2" gate="G$1" pin="VDDA"/>
+<wire x1="119.38" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="68.58" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
+<junction x="121.92" y="71.12"/>
+<wire x1="129.54" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
+<junction x="129.54" y="88.9"/>
+<pinref part="C21" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="88.9" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -1792,15 +1830,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="-20.32" y1="68.58" x2="-15.24" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="68.58" x2="-15.24" y2="73.66" width="0.1524" layer="91"/>
 <junction x="-15.24" y="73.66"/>
-</segment>
-</net>
-<net name="AVRCLK" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="CKO"/>
-<wire x1="22.86" y1="2.54" x2="50.8" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="2.54" x2="50.8" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="-2.54" x2="63.5" y2="-2.54" width="0.1524" layer="91"/>
-<label x="63.5" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDIO" class="0">
@@ -1904,9 +1933,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 </net>
 <net name="SWCLK" class="0">
 <segment>
-<pinref part="U$10" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="17.78" x2="160.02" y2="17.78" width="0.1524" layer="91"/>
 <label x="160.02" y="17.78" size="1.778" layer="95"/>
+<pinref part="TP2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="PA14"/>
@@ -1916,9 +1945,9 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 </net>
 <net name="SWD" class="0">
 <segment>
-<pinref part="U$7" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="20.32" x2="160.02" y2="20.32" width="0.1524" layer="91"/>
 <label x="160.02" y="20.32" size="1.778" layer="95"/>
+<pinref part="TP1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="PA13"/>
@@ -1936,15 +1965,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="101.6" y1="96.52" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="C20" gate="G$1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="VDD"/>
-<wire x1="119.38" y1="71.12" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="88.9" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="BOOT0"/>
@@ -1955,14 +1975,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="96.52" y1="99.06" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="MCUCLK" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="VDDA"/>
-<wire x1="119.38" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="68.58" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="86.36" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="C21" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="86.36" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="CKO"/>
+<wire x1="22.86" y1="2.54" x2="58.42" y2="2.54" width="0.1524" layer="91"/>
+<label x="50.8" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

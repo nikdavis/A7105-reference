@@ -1267,6 +1267,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <plain>
 <text x="101.6" y="-40.64" size="3.048" layer="94">Nikolas Davis</text>
 <text x="180.34" y="-40.64" size="3.048" layer="94">0.1</text>
+<text x="109.22" y="10.16" size="1.778" layer="91">NEED:
+- led pin
+- gpio pin
+- uart tx for sbus</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="22.86" smashed="yes"/>
@@ -1875,6 +1879,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="96.52" y1="109.22" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
 <label x="96.52" y="109.22" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="PB6"/>
+<wire x1="119.38" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
+<label x="124.46" y="48.26" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SBUS" class="0">
 <segment>
@@ -1916,6 +1925,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="GIO1"/>
 <wire x1="22.86" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
 <label x="50.8" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="PA10"/>
+<wire x1="88.9" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
+<label x="78.74" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -1975,6 +1989,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
