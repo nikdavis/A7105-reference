@@ -1152,7 +1152,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$8" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="U$9" library="AlienWhoop" deviceset="TESTPAD" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
 <part name="U2" library="STM32F031G4U6" deviceset="STM32F031G4U6" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="0.1uF"/>
@@ -1345,10 +1344,6 @@ led current</text>
 <instance part="GND11" gate="1" x="160.02" y="104.14" smashed="yes">
 <attribute name="VALUE" x="160.02" y="103.886" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C19" gate="G$1" x="154.94" y="109.22" smashed="yes">
-<attribute name="NAME" x="156.464" y="114.681" size="1.778" layer="95"/>
-<attribute name="VALUE" x="156.464" y="109.601" size="1.778" layer="96"/>
-</instance>
 <instance part="U2" gate="G$1" x="104.14" y="48.26" smashed="yes">
 <attribute name="NAME" x="93.9623" y="73.7043" size="2.54443125" layer="95"/>
 <attribute name="VALUE" x="93.9617" y="22.8142" size="2.54458125" layer="96"/>
@@ -1523,10 +1518,6 @@ led current</text>
 <wire x1="160.02" y1="116.84" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="160.02" y1="116.84" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="C19" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="109.22" x2="154.94" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="106.68" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
-<junction x="160.02" y="106.68"/>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
@@ -1657,11 +1648,7 @@ led current</text>
 <segment>
 <label x="149.86" y="119.38" size="1.778" layer="95"/>
 <pinref part="U$8" gate="G$1" pin="1"/>
-<pinref part="C19" gate="G$1" pin="1"/>
-<wire x1="142.24" y1="119.38" x2="154.94" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="119.38" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
-<junction x="154.94" y="119.38"/>
+<wire x1="142.24" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 <wire x1="142.24" y1="127" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
 <junction x="142.24" y="119.38"/>
@@ -1854,17 +1841,18 @@ led current</text>
 <label x="78.74" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="NRST" class="0">
 <segment>
 <pinref part="C18" gate="G$1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="!NRST"/>
-<wire x1="88.9" y1="66.04" x2="83.82" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="66.04" x2="83.82" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="66.04" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="66.04" x2="78.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="96.52" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<label x="83.82" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="BOOT0" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="BOOT0"/>
 <wire x1="88.9" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
@@ -1872,6 +1860,7 @@ led current</text>
 <wire x1="81.28" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="99.06" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<label x="83.82" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MCUCLK" class="0">

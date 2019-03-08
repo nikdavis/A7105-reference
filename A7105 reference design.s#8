@@ -1253,9 +1253,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="C19" library="Perfect_0402" deviceset="CAP_0402" device="" value="1uF"/>
 <part name="U2" library="STM32F031G4U6" deviceset="STM32F031G4U6" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
+<part name="C20" library="Perfect_0402" deviceset="CAP_0402" device="" value="0.1uF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C21" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="TP1" library="nikdavis" deviceset="TESTPAD" device=""/>
@@ -1267,6 +1266,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <plain>
 <text x="101.6" y="-40.64" size="3.048" layer="94">Nikolas Davis</text>
 <text x="180.34" y="-40.64" size="3.048" layer="94">0.1</text>
+<text x="88.9" y="5.08" size="1.778" layer="91">NEED:
+- led pin
+- gpio pin (pick one with edge interrupts close to a7105)
+- uart tx for sbus</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="0" y="22.86" smashed="yes"/>
@@ -1457,12 +1460,8 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <instance part="GND12" gate="1" x="101.6" y="81.28" smashed="yes">
 <attribute name="VALUE" x="101.6" y="81.026" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C21" gate="G$1" x="139.7" y="73.66" smashed="yes">
-<attribute name="NAME" x="141.224" y="79.121" size="1.778" layer="95"/>
-<attribute name="VALUE" x="141.224" y="74.041" size="1.778" layer="96"/>
-</instance>
-<instance part="GND13" gate="1" x="134.62" y="68.58" smashed="yes">
-<attribute name="VALUE" x="134.62" y="68.326" size="1.778" layer="96" align="top-center"/>
+<instance part="GND13" gate="1" x="129.54" y="68.58" smashed="yes">
+<attribute name="VALUE" x="129.54" y="68.326" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="124.46" y="91.44" smashed="yes">
 <attribute name="VALUE" x="124.46" y="94.234" size="1.778" layer="96" align="bottom-center"/>
@@ -1631,11 +1630,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="C20" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="73.66" x2="129.54" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="129.54" y1="71.12" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="C21" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="73.66" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="71.12" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<junction x="134.62" y="71.12"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -1729,10 +1723,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="119.38" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="68.58" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
 <junction x="121.92" y="71.12"/>
-<wire x1="129.54" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
-<junction x="129.54" y="88.9"/>
-<pinref part="C21" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="88.9" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -1875,6 +1865,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <wire x1="96.52" y1="109.22" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
 <label x="96.52" y="109.22" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="PB6"/>
+<wire x1="119.38" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
+<label x="124.46" y="48.26" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SBUS" class="0">
 <segment>
@@ -1916,6 +1911,11 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <pinref part="U1" gate="G$1" pin="GIO1"/>
 <wire x1="22.86" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
 <label x="50.8" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="PA10"/>
+<wire x1="88.9" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
+<label x="78.74" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -1975,6 +1975,10 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets

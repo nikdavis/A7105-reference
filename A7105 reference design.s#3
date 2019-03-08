@@ -768,64 +768,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="alienflight">
-<packages>
-<package name="0402LED">
-<description>APG1005PBC-T-5MAV
-1.0 x 0.5 x 0.2 mm (0402) SMD Chip LED Lamp</description>
-<smd name="1" x="-0.45" y="0" dx="0.7" dy="0.5" layer="1" thermals="no"/>
-<smd name="2" x="0.45" y="0" dx="0.7" dy="0.5" layer="1"/>
-<wire x1="-0.1" y1="-0.4" x2="-0.1" y2="-0.6" width="0.0762" layer="21"/>
-<wire x1="-0.1" y1="-0.6" x2="-0.1" y2="-0.8" width="0.0762" layer="21"/>
-<wire x1="-0.3" y1="-0.6" x2="-0.1" y2="-0.6" width="0.0762" layer="21"/>
-<wire x1="-0.1" y1="-0.6" x2="0.4" y2="-0.6" width="0.0762" layer="21"/>
-<wire x1="-0.1" y1="-0.6" x2="0.1" y2="-0.4" width="0.0762" layer="21"/>
-<wire x1="0.1" y1="-0.4" x2="0.1" y2="-0.8" width="0.0762" layer="21"/>
-<wire x1="0.1" y1="-0.8" x2="-0.1" y2="-0.6" width="0.0762" layer="21"/>
-<text x="-1.2" y="-0.2" size="0.3048" layer="21">K</text>
-<text x="-1.2" y="0.44" size="0.6096" layer="25">&gt;NAME</text>
-<text x="-1.3" y="-1.5" size="0.6096" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="LED1">
-<description>LED Symbol&lt;hr&gt;
-Author: Lance&lt;br&gt;
-Source: http://alienflight.com&lt;br&gt;
-License: &lt;a href="creativecommons.org/licenses/by-sa/4.0/" &gt;CC BY SA&lt;/a&gt;</description>
-<wire x1="0" y1="1.778" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="A" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-2.54" y="2.032" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SMD-CHIP-LED-0402">
-<description>0402 BLUE LED APG1005PBC-T-5MAV
-1.0 x 0.5 x 0.2 mm (0402) SMD Chip LED Lamp 
-https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
-<gates>
-<gate name="G$1" symbol="LED1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0402LED">
-<connects>
-<connect gate="G$1" pin="A" pad="2"/>
-<connect gate="G$1" pin="C" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="STM32F031G4U6">
 <packages>
 <package name="QFN50P400X400X60-28N">
@@ -1204,9 +1146,6 @@ https://www.mouser.com/ds/2/216/APG1005PBC-T-5MAV-315779.pdf</description>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R2" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="R5" library="Perfect_0402" deviceset="RES_0402" device="" value="200"/>
-<part name="U$5" library="alienflight" deviceset="SMD-CHIP-LED-0402" device=""/>
-<part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C18" library="Perfect_0402" deviceset="CAP_0402" device="" value="10nF"/>
 <part name="R6" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="U$6" library="AlienWhoop" deviceset="TESTPAD" device=""/>
@@ -1391,16 +1330,6 @@ led current</text>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="142.24" y="127" smashed="yes">
 <attribute name="VALUE" x="142.24" y="129.794" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="R5" gate="G$1" x="185.42" y="30.48" smashed="yes" rot="R270">
-<attribute name="NAME" x="186.9186" y="29.21" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="182.118" y="29.21" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="U$5" gate="G$1" x="185.42" y="12.7" smashed="yes" rot="R270">
-<attribute name="NAME" x="187.452" y="15.24" size="1.778" layer="95" rot="R270"/>
-</instance>
-<instance part="GND10" gate="1" x="185.42" y="5.08" smashed="yes">
-<attribute name="VALUE" x="185.42" y="4.826" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="C18" gate="G$1" x="101.6" y="83.82" smashed="yes">
 <attribute name="NAME" x="103.124" y="89.281" size="1.778" layer="95"/>
@@ -1588,11 +1517,6 @@ led current</text>
 <pinref part="C17" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="-35.56" y1="60.96" x2="-35.56" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$5" gate="G$1" pin="C"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="185.42" y1="10.16" x2="185.42" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$9" gate="G$1" pin="1"/>
@@ -1894,21 +1818,6 @@ led current</text>
 <label x="124.46" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="STATUS" class="0">
-<segment>
-<wire x1="180.34" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="35.56" x2="185.42" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<label x="177.8" y="35.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="U$5" gate="G$1" pin="A"/>
-<wire x1="185.42" y1="20.32" x2="185.42" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GPIO1" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GIO1"/>
@@ -1945,17 +1854,18 @@ led current</text>
 <label x="78.74" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="NRST" class="0">
 <segment>
 <pinref part="C18" gate="G$1" pin="1"/>
 <pinref part="U2" gate="G$1" pin="!NRST"/>
-<wire x1="88.9" y1="66.04" x2="83.82" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="66.04" x2="83.82" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="66.04" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="66.04" x2="78.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="96.52" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<label x="83.82" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="BOOT0" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="BOOT0"/>
 <wire x1="88.9" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
@@ -1963,6 +1873,7 @@ led current</text>
 <wire x1="81.28" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="99.06" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<label x="83.82" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MCUCLK" class="0">
